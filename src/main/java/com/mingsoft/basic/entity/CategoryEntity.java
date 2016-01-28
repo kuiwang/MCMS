@@ -22,162 +22,156 @@ The MIT License (MIT) * Copyright (c) 2015 铭飞科技
 package com.mingsoft.basic.entity;
 
 import java.sql.Timestamp;
+
 import com.mingsoft.base.entity.BaseEntity;
 
 /**
  * 类别实体
+ * 
  * @author 荣繁奎
- * @version 
- * 版本号：100-000-000<br/>
- * 创建日期：2012-03-15<br/>
- * 历史修订：<br/>
+ * @version 版本号：100-000-000<br/>
+ *          创建日期：2012-03-15<br/>
+ *          历史修订：<br/>
  */
 public class CategoryEntity extends BaseEntity {
 
-	/**
-	 * 类别的编号自增长id
-	 */
-	private int categoryId;
-	
-	/**
-	 * 类别的标题
-	 */
-	private String categoryTitle;
-	
-	/**
-	 * 类别的排序
-	 */
-	private int categorySort;
-	
-	/**
-	 * 类别发布时间
-	 */
-	private Timestamp categoryDateTime;
-	
-	/**
-	 * 发布用户编号(发布者编号)
-	 */
-	private int categoryManagerId;
-	
-	/**
-	 * 所属模块编号
-	 */
-	private int categoryModelId;
+    /**
+     * 分类所属应用编号
+     */
+    private int categoryAppId;
 
+    /**
+     * 父类别的编号
+     */
+    private int categoryCategoryId;
 
+    /**
+     * 类别发布时间
+     */
+    private Timestamp categoryDateTime;
 
-	/**
-	 * 父类别的编号
-	 */
-	private int categoryCategoryId;
-	
-	/**
-	 * 缩略图
-	 */
-	private String categorySmallImg;
-	
-	/**
-	 * 分类所属应用编号
-	 */
-	private int categoryAppId;
-	
-	/**
-	 * 栏目描述
-	 */
-	private String categoryDescription;
-	
-	
+    /**
+     * 栏目描述
+     */
+    private String categoryDescription;
 
-	public String getCategoryDescription() {
-		return categoryDescription;
-	}
+    /**
+     * 类别的编号自增长id
+     */
+    private int categoryId;
 
-	public void setCategoryDescription(String categoryDescription) {
-		this.categoryDescription = categoryDescription;
-	}
+    /**
+     * 发布用户编号(发布者编号)
+     */
+    private int categoryManagerId;
 
-	public CategoryEntity() {
-		super();
-	}
-	
-	public CategoryEntity(int categoryId,String categoryTitle) {
-		this.categoryId = categoryId;
-		this.categoryTitle = categoryTitle;
-	}
+    /**
+     * 所属模块编号
+     */
+    private int categoryModelId;
 
-	public int getCategoryAppId() {
-		return categoryAppId;
-	}
+    /**
+     * 缩略图
+     */
+    private String categorySmallImg;
 
-	public void setCategoryAppId(int categoryAppId) {
-		this.categoryAppId = categoryAppId;
-	}
+    /**
+     * 类别的排序
+     */
+    private int categorySort;
 
-	public int getCategoryId() {
-		return categoryId;
-	}
+    /**
+     * 类别的标题
+     */
+    private String categoryTitle;
 
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
-	}
+    public CategoryEntity() {
+        super();
+    }
 
-	public String getCategoryTitle() {
-		return categoryTitle;
-	}
+    public CategoryEntity(int categoryId, String categoryTitle) {
+        this.categoryId = categoryId;
+        this.categoryTitle = categoryTitle;
+    }
 
-	public void setCategoryTitle(String categoryTitle) {
-		this.categoryTitle = categoryTitle;
-	}
+    public int getCategoryAppId() {
+        return categoryAppId;
+    }
 
-	public int getCategorySort() {
-		return categorySort;
-	}
+    public int getCategoryCategoryId() {
+        return categoryCategoryId;
+    }
 
-	public void setCategorySort(int categorySort) {
-		this.categorySort = categorySort;
-	}
+    public Timestamp getCategoryDateTime() {
+        return categoryDateTime;
+    }
 
-	public Timestamp getCategoryDateTime() {
-		return categoryDateTime;
-	}
+    public String getCategoryDescription() {
+        return categoryDescription;
+    }
 
-	public void setCategoryDateTime(Timestamp categoryDateTime) {
-		this.categoryDateTime = categoryDateTime;
-	}
+    public int getCategoryId() {
+        return categoryId;
+    }
 
+    public int getCategoryManagerId() {
+        return categoryManagerId;
+    }
 
-	public int getCategoryManagerId() {
-		return categoryManagerId;
-	}
+    public int getCategoryModelId() {
+        return categoryModelId;
+    }
 
-	public void setCategoryManagerId(int categoryManagerId) {
-		this.categoryManagerId = categoryManagerId;
-	}
+    public String getCategorySmallImg() {
+        return categorySmallImg;
+    }
 
-	public int getCategoryModelId() {
-		return categoryModelId;
-	}
+    public int getCategorySort() {
+        return categorySort;
+    }
 
-	public void setCategoryModelId(int categoryModelId) {
-		this.categoryModelId = categoryModelId;
-	}
+    public String getCategoryTitle() {
+        return categoryTitle;
+    }
 
-	public int getCategoryCategoryId() {
-		return categoryCategoryId;
-	}
+    public void setCategoryAppId(int categoryAppId) {
+        this.categoryAppId = categoryAppId;
+    }
 
-	public void setCategoryCategoryId(int categoryCategoryId) {
-		this.categoryCategoryId = categoryCategoryId;
-	}
+    public void setCategoryCategoryId(int categoryCategoryId) {
+        this.categoryCategoryId = categoryCategoryId;
+    }
 
-	public String getCategorySmallImg() {
-		return categorySmallImg;
-	}
+    public void setCategoryDateTime(Timestamp categoryDateTime) {
+        this.categoryDateTime = categoryDateTime;
+    }
 
-	public void setCategorySmallImg(String categorySmallImg) {
-		this.categorySmallImg = categorySmallImg;
-	}
+    public void setCategoryDescription(String categoryDescription) {
+        this.categoryDescription = categoryDescription;
+    }
 
-	
-	
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public void setCategoryManagerId(int categoryManagerId) {
+        this.categoryManagerId = categoryManagerId;
+    }
+
+    public void setCategoryModelId(int categoryModelId) {
+        this.categoryModelId = categoryModelId;
+    }
+
+    public void setCategorySmallImg(String categorySmallImg) {
+        this.categorySmallImg = categorySmallImg;
+    }
+
+    public void setCategorySort(int categorySort) {
+        this.categorySort = categorySort;
+    }
+
+    public void setCategoryTitle(String categoryTitle) {
+        this.categoryTitle = categoryTitle;
+    }
+
 }

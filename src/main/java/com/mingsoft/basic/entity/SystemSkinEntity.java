@@ -22,99 +22,99 @@ The MIT License (MIT) * Copyright (c) 2015 铭飞科技
 package com.mingsoft.basic.entity;
 
 import java.util.Date;
+
 import com.mingsoft.base.entity.BaseEntity;
 
 /**
  * 系统皮肤
+ * 
  * @author 王天培QQ:78750478
- * @version 
- * 版本号：100-000-000<br/>
- * 创建日期：2012-03-15<br/>
- * 历史修订：<br/>
+ * @version 版本号：100-000-000<br/>
+ *          创建日期：2012-03-15<br/>
+ *          历史修订：<br/>
  */
-public class SystemSkinEntity extends BaseEntity{
+public class SystemSkinEntity extends BaseEntity {
 
-	private int systemSkinId;
-	
-	/**
-	 * 背景图
-	 */
-	private String systemSkinBackgroundImg;
-	
-	/**
-	 * 字体颜色
-	 */
-	private String systemSkinColor;
-	
-	/**
-	 * 全局样式
-	 */
-	private String systemSkinCss;
-	
-	private Date systemSkinDate;
-	
-	private int systemSkinAppId;
-	/**
-	 * 登陆页面
-	 */
-	private String systemSkinLoginPage;
-	
+    private int systemSkinAppId;
 
-	public String getSystemSkinLoginPage() {
-		return systemSkinLoginPage;
-	}
+    /**
+     * 背景图
+     */
+    private String systemSkinBackgroundImg;
 
-	public void setSystemSkinLoginPage(String systemSkinLoginPage) {
-		this.systemSkinLoginPage = systemSkinLoginPage;
-	}
+    /**
+     * 字体颜色
+     */
+    private String systemSkinColor;
 
-	public int getSystemSkinAppId() {
-		return systemSkinAppId;
-	}
+    /**
+     * 全局样式
+     */
+    private String systemSkinCss;
 
-	public void setSystemSkinAppId(int systemSkinAppId) {
-		this.systemSkinAppId = systemSkinAppId;
-	}
+    private Date systemSkinDate;
 
-	public Date getSystemSkinDate() {
-		return systemSkinDate;
-	}
+    private int systemSkinId;
 
-	public void setSystemSkinDate(Date systemSkinDate) {
-		this.systemSkinDate = systemSkinDate;
-	}
+    /**
+     * 登陆页面
+     */
+    private String systemSkinLoginPage;
 
-	public int getSystemSkinId() {
-		return systemSkinId;
-	}
+    public int getSystemSkinAppId() {
+        return systemSkinAppId;
+    }
 
-	public void setSystemSkinId(int systemSkinId) {
-		this.systemSkinId = systemSkinId;
-	}
+    public String getSystemSkinBackgroundImg() {
+        return systemSkinBackgroundImg;
+    }
 
-	public String getSystemSkinBackgroundImg() {
-		return systemSkinBackgroundImg;
-	}
+    public String getSystemSkinColor() {
+        return systemSkinColor;
+    }
 
-	public void setSystemSkinBackgroundImg(String systemSkinBackgroundImg) {
-		this.systemSkinBackgroundImg = systemSkinBackgroundImg;
-	}
+    public String getSystemSkinCss() {
+        return systemSkinCss;
+    }
 
-	public String getSystemSkinColor() {
-		return systemSkinColor;
-	}
+    public Date getSystemSkinDate() {
+        return systemSkinDate;
+    }
 
-	public void setSystemSkinColor(String systemSkinColor) {
-		this.systemSkinColor = systemSkinColor;
-	}
+    public int getSystemSkinId() {
+        return systemSkinId;
+    }
 
-	public String getSystemSkinCss() {
-		return systemSkinCss;
-	}
+    public String getSystemSkinLoginPage() {
+        return systemSkinLoginPage;
+    }
 
-	public void setSystemSkinCss(String systemSkinCss) {
-		this.systemSkinCss = systemSkinCss;
-	}
-	
-	
+    public void setSystemSkinAppId(int systemSkinAppId) {
+        this.systemSkinAppId = systemSkinAppId;
+    }
+
+    public void setSystemSkinBackgroundImg(String systemSkinBackgroundImg) {
+        this.systemSkinBackgroundImg = systemSkinBackgroundImg;
+    }
+
+    public void setSystemSkinColor(String systemSkinColor) {
+        this.systemSkinColor = systemSkinColor;
+    }
+
+    public void setSystemSkinCss(String systemSkinCss) {
+        this.systemSkinCss = systemSkinCss;
+    }
+
+    public void setSystemSkinDate(Date systemSkinDate) {
+        this.systemSkinDate = systemSkinDate;
+    }
+
+    public void setSystemSkinId(int systemSkinId) {
+        this.systemSkinId = systemSkinId;
+    }
+
+    public void setSystemSkinLoginPage(String systemSkinLoginPage) {
+        this.systemSkinLoginPage = systemSkinLoginPage;
+    }
+
 }

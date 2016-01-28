@@ -25,78 +25,77 @@ import com.mingsoft.base.entity.BaseEntity;
 
 /**
  * 上传更新实体
+ * 
  * @author 杨新远
- * @version 
- * 版本号：100-000-000<br/>
- * 创建日期：2012-03-15<br/>
- * 历史修订：<br/>
+ * @version 版本号：100-000-000<br/>
+ *          创建日期：2012-03-15<br/>
+ *          历史修订：<br/>
  */
-public class UpgraderEntity extends BaseEntity{
-	
-	/**
-	 * 上传更新id
-	 */
-	private  int  upgraderId;
-	
-	/**
-	 * 所属模块编号
-	 */
-	private int upgraderModelId;
-	
-	/**
-	 * 版本信息
-	 */
-	private int upgraderVersion;
-	
-	/**
-	 * 描述
-	 */
-	private String upgraderDesc;	
-	
-	/**
-	 * 更新补丁包的位置
-	 */
-	private String upgraderPatch	;
-	
-	
-		public int getUpgraderId() {
-		return upgraderId;
-	}
+public class UpgraderEntity extends BaseEntity {
 
-	public void setUpgraderId(int upgraderId) {
-		this.upgraderId = upgraderId;
-	}
+    /**
+     * 描述
+     */
+    private String upgraderDesc;
 
-	public int getUpgraderModelId() {
-		return upgraderModelId;
-	}
+    /**
+     * 上传更新id
+     */
+    private int upgraderId;
 
-	public void setUpgraderModelId(int upgraderModelId) {
-		this.upgraderModelId = upgraderModelId;
-	}
+    /**
+     * 所属模块编号
+     */
+    private int upgraderModelId;
 
-	public int getUpgraderVersion() {
-		return upgraderVersion;
-	}
+    /**
+     * 更新补丁包的位置
+     */
+    private String upgraderPatch;
 
-	public void setUpgraderVersion(int upgraderVersion) {
-		this.upgraderVersion = upgraderVersion;
-	}
+    /**
+     * 版本信息
+     */
+    private int upgraderVersion;
 
-	public String getUpgraderDesc() {
-		return upgraderDesc;
-	}
+    public String getUpgraderDesc() {
+        return upgraderDesc;
+    }
 
-	public void setUpgraderDesc(String upgraderDesc) {
-		this.upgraderDesc = upgraderDesc;
-	}
+    public int getUpgraderId() {
+        return upgraderId;
+    }
 
-	public String getUpgraderPatch() {
-		return upgraderPatch;
-	}
+    public int getUpgraderModelId() {
+        return upgraderModelId;
+    }
 
-	public void setUpgraderPatch(String upgraderPatch) {
-		this.upgraderPatch = upgraderPatch;
-	}
+    public String getUpgraderPatch() {
+        return upgraderPatch;
+    }
+
+    public int getUpgraderVersion() {
+        return upgraderVersion;
+    }
+
+    public void setUpgraderDesc(String upgraderDesc) {
+        this.upgraderDesc = upgraderDesc;
+    }
+
+    public void setUpgraderId(int upgraderId) {
+        this.upgraderId = upgraderId;
+    }
+
+    public void setUpgraderModelId(int upgraderModelId) {
+        this.upgraderModelId = upgraderModelId;
+    }
+
+    public void setUpgraderPatch(String upgraderPatch) {
+        this.upgraderPatch = upgraderPatch;
+    }
+
+    public void setUpgraderVersion(int upgraderVersion) {
+        this.upgraderVersion = upgraderVersion;
+    }
 
 }

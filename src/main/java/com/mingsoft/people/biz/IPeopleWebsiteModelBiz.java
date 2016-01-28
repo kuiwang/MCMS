@@ -43,28 +43,29 @@ import com.mingsoft.people.entity.PeopleWebsiteModelEntity;
  * 
  * @version 300-001-001
  * 
- * <p>
- * 版权所有 铭飞科技
- * </p>
- *  
- * <p>
- * Comments: 用户站点模块业务层接口，继承IBaseBiz接口
- * </p>
- *  
- * <p>
- * Create Date:2014-9-11
- * </p>
+ *          <p>
+ *          版权所有 铭飞科技
+ *          </p>
+ * 
+ *          <p>
+ *          Comments: 用户站点模块业务层接口，继承IBaseBiz接口
+ *          </p>
+ * 
+ *          <p>
+ *          Create Date:2014-9-11
+ *          </p>
  *
- * <p>
- * Modification history:
- * </p>
+ *          <p>
+ *          Modification history:
+ *          </p>
  */
 public interface IPeopleWebsiteModelBiz extends IBaseBiz {
 
-	/**
-	 * 根据用户站点模块实体删除据用户站点模块字段
-	 * @param peopleWebsiteModel
-	 */
-	public void deleteEntity(PeopleWebsiteModelEntity peopleWebsiteModel );
-	
+    /**
+     * 根据用户站点模块实体删除据用户站点模块字段
+     * 
+     * @param peopleWebsiteModel
+     */
+    public void deleteEntity(PeopleWebsiteModelEntity peopleWebsiteModel);
+
 }

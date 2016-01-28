@@ -23,12 +23,11 @@ package com.mingsoft.cms.biz;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.mingsoft.base.biz.IBaseBiz;
 import com.mingsoft.base.entity.BaseEntity;
 import com.mingsoft.cms.entity.ContentModelEntity;
 import com.mingsoft.util.PageUtil;
+
 /**
  * 
  * 
@@ -64,36 +63,41 @@ import com.mingsoft.util.PageUtil;
  *          Modification history:
  *          </p>
  */
-public interface IContentModelBiz extends IBaseBiz{
-	
-	/**
-	 * 根据内容模型的表名查找实体
-	 * @param cmTableName 表名
-	 * @return 内容模型实体
-	 */
-	public ContentModelEntity getContentModelByTableName(String cmTableName);
-	
-	/**
-	 * 根据管理员Id查找内容模型的总数
-	 * @param cmManagerId 管理员id
-	 * @return 记录总数
-	 */
-	public int getContentModelByManagerId(int cmManagerId);
-	
-	/**
-	 * 分页查询指定管理员的表单内容模型
-	 * @param entity 实体
-	 * @param page Map对象
-	 * @param order 排序方式,true:asc;fales:desc
-	 * @param cmManagerId 管理员id
-	 * @return 表单内容模型
-	 */
-	List<BaseEntity> queryPageByManagerId(PageUtil page,String orderBy,boolean order, int cmManagerId);
-	
-	/**
-	 * 根据管理员id查找内容模型实体
-	 * @param cmManagerId
-	 * @return 表单内容模型
-	 */
-	public List<BaseEntity> queryByManagerId(int cmManagerId);
+public interface IContentModelBiz extends IBaseBiz {
+
+    /**
+     * 根据管理员Id查找内容模型的总数
+     * 
+     * @param cmManagerId 管理员id
+     * @return 记录总数
+     */
+    public int getContentModelByManagerId(int cmManagerId);
+
+    /**
+     * 根据内容模型的表名查找实体
+     * 
+     * @param cmTableName 表名
+     * @return 内容模型实体
+     */
+    public ContentModelEntity getContentModelByTableName(String cmTableName);
+
+    /**
+     * 根据管理员id查找内容模型实体
+     * 
+     * @param cmManagerId
+     * @return 表单内容模型
+     */
+    public List<BaseEntity> queryByManagerId(int cmManagerId);
+
+    /**
+     * 分页查询指定管理员的表单内容模型
+     * 
+     * @param entity 实体
+     * @param page Map对象
+     * @param order 排序方式,true:asc;fales:desc
+     * @param cmManagerId 管理员id
+     * @return 表单内容模型
+     */
+    List<BaseEntity> queryPageByManagerId(PageUtil page, String orderBy, boolean order,
+            int cmManagerId);
 }

@@ -67,30 +67,30 @@ import com.mingsoft.cms.biz.IArticleBiz;
 @Aspect
 // 声明为切面类，底层使用动态代理实现AOP
 public class ColumnAdvice {
-	
-	@Autowired
-	private IArticleBiz articleBiz;
-	
-	// 指定切入点匹配表达式，注意它是以方法的形式进行声明的。
-		// 即切点集合是：aop.annotation包下所有类所有方法
-		// 第一个* 代表返回值类型
-		// 如果要设置多个切点可以使用 || 拼接
-		// and args(com.mingsoft.order.entity.OrderEntity
-		@Pointcut(" execution(*  com.mingsoft.cms.biz.impl.ColumnBizImpl.deleteCategory(..) ) ")
-		public void deleteCategory() {
-		}
-		
-		/**
-		 * 
-		 * @param jp
-		 * @throws Throwable
-		 */
-		@After("deleteCategory()")
-		public void deleteArticle(JoinPoint jp)throws Throwable{
-			Object[] obj = jp.getArgs();
-			if (obj[0] instanceof Integer) {
-				//删除该栏目下的所有文章
-				//
-			}
-		}
+
+    @Autowired
+    private IArticleBiz articleBiz;
+
+    /**
+     * 
+     * @param jp
+     * @throws Throwable
+     */
+    @After("deleteCategory()")
+    public void deleteArticle(JoinPoint jp) throws Throwable {
+        Object[] obj = jp.getArgs();
+        if (obj[0] instanceof Integer) {
+            //删除该栏目下的所有文章
+            //
+        }
+    }
+
+    // 指定切入点匹配表达式，注意它是以方法的形式进行声明的。
+    // 即切点集合是：aop.annotation包下所有类所有方法
+    // 第一个* 代表返回值类型
+    // 如果要设置多个切点可以使用 || 拼接
+    // and args(com.mingsoft.order.entity.OrderEntity
+    @Pointcut(" execution(*  com.mingsoft.cms.biz.impl.ColumnBizImpl.deleteCategory(..) ) ")
+    public void deleteCategory() {
+    }
 }

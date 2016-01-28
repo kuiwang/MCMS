@@ -21,7 +21,6 @@ The MIT License (MIT) * Copyright (c) 2015 铭飞科技
 
 package com.mingsoft.people.constant;
 
-
 import java.util.ResourceBundle;
 
 /**
@@ -36,21 +35,22 @@ import java.util.ResourceBundle;
  * Copyright: Copyright (c) 2014 - 2015
  * </p>
  *
- * @author 王天培
- *                QQ:78750478
+ * @author 王天培 QQ:78750478
  *
- * <p>
- * Comments:　用户模块资源文件
- * </p>
+ *         <p>
+ *         Comments:　用户模块资源文件
+ *         </p>
  *
- * <p>
- * Create Date:2015-1-31
- * </p>
+ *         <p>
+ *         Create Date:2015-1-31
+ *         </p>
  *
- * <p>
- * Modification history:
- * </p>
+ *         <p>
+ *         Modification history:
+ *         </p>
  */
 public class Const {
-	public final static ResourceBundle RESOURCES = ResourceBundle.getBundle("com.mingsoft.people.resources.resources");
+
+    public final static ResourceBundle RESOURCES = ResourceBundle
+            .getBundle("com.mingsoft.people.resources.resources");
 }

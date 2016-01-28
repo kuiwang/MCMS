@@ -47,323 +47,321 @@ import com.mingsoft.util.StringUtil;
  * 
  * @author 姓名 史爱华
  * 
- * @version 
+ * @version
  * 
- * <p>
- * 版权所有 铭飞科技
- * </p>
- *  
- * <p>
- * Comments: ArticleEntity实体的bean用于给外部请求数据使用
- * </p>
- *  
- * <p>
- * Create Date:2015-06-15
- * </p>
+ *          <p>
+ *          版权所有 铭飞科技
+ *          </p>
+ * 
+ *          <p>
+ *          Comments: ArticleEntity实体的bean用于给外部请求数据使用
+ *          </p>
+ * 
+ *          <p>
+ *          Create Date:2015-06-15
+ *          </p>
  *
- * <p>
- * Modification history:
- * </p>
+ *          <p>
+ *          Modification history:
+ *          </p>
  */
 public class ArticleBean {
-	
-	/**
-	 * 文章内容
-	 */
-	private String articleContent;
-	
-	/**
-	 * 文章作者
-	 */
-	private String articleAuthor;
-	
-	/**
-	 * 文章属性
-	 */
-	private String articleType ;
-	
-	private int articleFreeOrder;
-	
-	
-	
-	/**
-	 * 文章的来源
-	 */
-	private String articleSource;
 
-	/**
-	 * 文章跳转链接地址
-	 */
-	private String articleUrl;
-	
-	/**
-	 * 文章关键字
-	 */
-	private String articleKeyword;
-	
-	/**
-	 * 文章标题
-	 */
-	private String articleTitle;
-	
-	/**
-	 * 文章描述
-	 */
-	private String articleDescription;
-	
-	/**
-	 * 文章所属的分类Id
-	 */
-	private int articleCategoryId;
-	
-	/**
-	 * 文章url地址 主要是用户生成html使用
-	 */
-	private String articleLinkURL;
-	
-	/**
-	 * 文章分类url地址，主要是用户生成html使用
-	 */
-	private String articleTypeLinkURL;
-	
-	/**
-	 * 一对一管理栏目
-	 */
-	private ColumnEntity  column;
-	
-	/**
-	 * 发布时间
-	 */
-	private Timestamp articleDateTime;
+    /**
+     * 文章作者
+     */
+    private String articleAuthor;
 
-	/**
-	 * 更新时间
-	 */
-	private Date articleUpdateTime;
-	
-	/**
-	 * 缩略图
-	 */
-	private String articleThumbnails;
-	
-	/**
-	 * 点击次数
-	 */
-	private int articleHit;
-	
-	
-	
-	
-	public int getArticleFreeOrder() {
-		return articleFreeOrder;
-	}
+    /**
+     * 文章所属的分类Id
+     */
+    private int articleCategoryId;
 
-	public void setArticleFreeOrder(int articleFreeOrder) {
-		this.articleFreeOrder = articleFreeOrder;
-	}
+    /**
+     * 文章内容
+     */
+    private String articleContent;
 
-	public String getArticleTitle() {
-		return articleTitle;
-	}
+    /**
+     * 发布时间
+     */
+    private Timestamp articleDateTime;
 
-	public void setArticleTitle(String articleTitle) {
-		this.articleTitle = articleTitle;
-	}
+    /**
+     * 文章描述
+     */
+    private String articleDescription;
 
-	public String getArticleDescription() {
-		return articleDescription;
-	}
+    private int articleFreeOrder;
 
-	public void setArticleDescription(String articleDescription) {
-		this.articleDescription = articleDescription;
-	}
+    /**
+     * 点击次数
+     */
+    private int articleHit;
 
-	public int getArticleCategoryId() {
-		return articleCategoryId;
-	}
+    /**
+     * 文章关键字
+     */
+    private String articleKeyword;
 
-	public void setArticleCategoryId(int articleCategoryId) {
-		this.articleCategoryId = articleCategoryId;
-	}
+    /**
+     * 文章url地址 主要是用户生成html使用
+     */
+    private String articleLinkURL;
 
-	public int getArticleHit() {
-		return articleHit;
-	}
+    /**
+     * 文章的来源
+     */
+    private String articleSource;
 
-	public void setArticleHit(int articleHit) {
-		this.articleHit = articleHit;
-	}
+    /**
+     * 缩略图
+     */
+    private String articleThumbnails;
 
-	public Timestamp getArticleDateTime() {
-		return articleDateTime;
-	}
+    /**
+     * 文章标题
+     */
+    private String articleTitle;
 
-	public void setArticleDateTime(Timestamp articleDateTime) {
-		this.articleDateTime = articleDateTime;
-	}
+    /**
+     * 文章属性
+     */
+    private String articleType;
 
-	public Date getArticleUpdateTime() {
-		return articleUpdateTime;
-	}
+    /**
+     * 文章分类url地址，主要是用户生成html使用
+     */
+    private String articleTypeLinkURL;
 
-	public void setArticleUpdateTime(Date articleUpdateTime) {
-		this.articleUpdateTime = articleUpdateTime;
-	}
+    /**
+     * 更新时间
+     */
+    private Date articleUpdateTime;
 
-	public String getArticleThumbnails() {
-		return articleThumbnails;
-	}
+    /**
+     * 文章跳转链接地址
+     */
+    private String articleUrl;
 
-	public void setArticleThumbnails(String articleThumbnails) {
-		this.articleThumbnails = articleThumbnails;
-	}
+    /**
+     * 一对一管理栏目
+     */
+    private ColumnEntity column;
 
-	/**
-	 * 获取文章实体所属的栏目实体
-	 * @return
-	 */
-	public ColumnEntity getColumn() {
-		return column;
-	}
-	
-	/**
-	 * 设置文章所属的栏目实体
-	 * @param column
-	 */
-	public void setColumn(ColumnEntity column) {
-		this.column = column;
-	}
+    /**
+     * 获取文章作者
+     * 
+     * @return 返回文章作者
+     */
+    public String getArticleAuthor() {
+        return articleAuthor;
+    }
 
-	public String getArticleTypeLinkURL() {
-		return articleTypeLinkURL;
-	}
+    public int getArticleCategoryId() {
+        return articleCategoryId;
+    }
 
-	public void setArticleTypeLinkURL(String articleTypeLinkURL) {
-		this.articleTypeLinkURL = articleTypeLinkURL;
-	}
+    /**
+     * 获取文章内容
+     * 
+     * @return 返回文章内容
+     */
+    public String getArticleContent() {
+        return articleContent;
+    }
 
-	public String getArticleLinkURL() {
-		return articleLinkURL;
-	}
+    public Timestamp getArticleDateTime() {
+        return articleDateTime;
+    }
 
-	public void setArticleLinkURL(String articleLinkURL) {
-		this.articleLinkURL = articleLinkURL;
-	}
+    public String getArticleDescription() {
+        return articleDescription;
+    }
 
-	/**
-	 * 获取文章作者
-	 * @return 返回文章作者
-	 */
-	public String getArticleAuthor() {
-		return articleAuthor;
-	}
+    public int getArticleFreeOrder() {
+        return articleFreeOrder;
+    }
 
-	/**
-	 * 获取文章内容
-	 * @return 返回文章内容
-	 */
-	public String getArticleContent() {
-		return articleContent;
-	}
+    public int getArticleHit() {
+        return articleHit;
+    }
 
+    /**
+     * 获取文章关键字
+     * 
+     * @return 返回文章关键字
+     */
+    public String getArticleKeyword() {
+        return articleKeyword;
+    }
 
-	
+    public String getArticleLinkURL() {
+        return articleLinkURL;
+    }
 
-	
-	/**
-	 * 获取文章关键字
-	 * @return 返回文章关键字
-	 */
-	public String getArticleKeyword() {
-		return articleKeyword;
-	}
-	
-	/**
-	 * 获取文章的来源
-	 * @return 返回文章的来源
-	 */
-	public String getArticleSource() {
-		return articleSource;
-	}
-	
-	/**
-	 * 获取文章属性
-	 * @return 返回文章属性
-	 */
-	public String getArticleType() {
-		return articleType;
-	}
-	
-	/**
-	 * 获取文章跳转链接
-	 * @return 返回文章跳转链接
-	 */
-	public String getArticleUrl() {
-		return articleUrl; 
-	}
-	
+    /**
+     * 获取文章的来源
+     * 
+     * @return 返回文章的来源
+     */
+    public String getArticleSource() {
+        return articleSource;
+    }
 
-	
-	/**
-	 * 设置文章作者
-	 * @param articleAuthor 传入文章作者
-	 */
-	public void setArticleAuthor(String articleAuthor) {
-		this.articleAuthor = articleAuthor;
-	}
-	
-	/**
-	 * 设置文章内容
-	 * @param articleContent 传入文章内容
-	 */
-	public void setArticleContent(String articleContent) {
-		this.articleContent = articleContent;
-	}
-	
-	
+    public String getArticleThumbnails() {
+        return articleThumbnails;
+    }
 
+    public String getArticleTitle() {
+        return articleTitle;
+    }
 
+    /**
+     * 获取文章属性
+     * 
+     * @return 返回文章属性
+     */
+    public String getArticleType() {
+        return articleType;
+    }
 
-	/**
-	 * 设置文章关键字
-	 * @param articleKeyword 传入文章关键字列表
-	 */
-	public void setArticleKeyword(String articleKeyword) {
-		this.articleKeyword = articleKeyword;
-	}
+    public String getArticleTypeLinkURL() {
+        return articleTypeLinkURL;
+    }
 
-	/**
-	 * 设置文章的来源
-	 * @param articleSource 传入文章的来源
-	 */
-	public void setArticleSource(String articleSource) {
-		this.articleSource = articleSource;
-	}
+    public Date getArticleUpdateTime() {
+        return articleUpdateTime;
+    }
 
-	/**
-	 * 设置文章属性
-	 * @param articleType 传入文章属性
-	 */
-	public void setArticleType(String articleType) {
-		this.articleType = articleType;
-	}
-	
-	/**
-	 * 设置文章跳转链接
-	 * @param articleUrl 传入文章跳转链接地址
-	 */
-	public void setArticleUrl(String articleUrl) {
-		this.articleUrl = articleUrl;
-	}
+    /**
+     * 获取文章跳转链接
+     * 
+     * @return 返回文章跳转链接
+     */
+    public String getArticleUrl() {
+        return articleUrl;
+    }
 
+    public String getArticleUrl(AppEntity app) {
+        if (!StringUtil.isBlank(app.getAppMobileStyle())) {
+            return app.getAppHostUrl() + IParserRegexConstant.HTML_SAVE_PATH + File.separator + "m"
+                    + File.separator + this.getArticleUrl();
+        }
+        return app.getAppHostUrl() + File.separator + IParserRegexConstant.HTML_SAVE_PATH
+                + File.separator + this.getArticleUrl();
+    }
 
+    /**
+     * 获取文章实体所属的栏目实体
+     * 
+     * @return
+     */
+    public ColumnEntity getColumn() {
+        return column;
+    }
 
-	
-	public String getArticleUrl(AppEntity app) {
-		if (!StringUtil.isBlank(app.getAppMobileStyle())) {
-			return app.getAppHostUrl()+IParserRegexConstant.HTML_SAVE_PATH+File.separator+"m"+File.separator+this.getArticleUrl();
-		}
-		return app.getAppHostUrl()+File.separator+IParserRegexConstant.HTML_SAVE_PATH+File.separator+this.getArticleUrl();
-	}
-	
+    /**
+     * 设置文章作者
+     * 
+     * @param articleAuthor 传入文章作者
+     */
+    public void setArticleAuthor(String articleAuthor) {
+        this.articleAuthor = articleAuthor;
+    }
+
+    public void setArticleCategoryId(int articleCategoryId) {
+        this.articleCategoryId = articleCategoryId;
+    }
+
+    /**
+     * 设置文章内容
+     * 
+     * @param articleContent 传入文章内容
+     */
+    public void setArticleContent(String articleContent) {
+        this.articleContent = articleContent;
+    }
+
+    public void setArticleDateTime(Timestamp articleDateTime) {
+        this.articleDateTime = articleDateTime;
+    }
+
+    public void setArticleDescription(String articleDescription) {
+        this.articleDescription = articleDescription;
+    }
+
+    public void setArticleFreeOrder(int articleFreeOrder) {
+        this.articleFreeOrder = articleFreeOrder;
+    }
+
+    public void setArticleHit(int articleHit) {
+        this.articleHit = articleHit;
+    }
+
+    /**
+     * 设置文章关键字
+     * 
+     * @param articleKeyword 传入文章关键字列表
+     */
+    public void setArticleKeyword(String articleKeyword) {
+        this.articleKeyword = articleKeyword;
+    }
+
+    public void setArticleLinkURL(String articleLinkURL) {
+        this.articleLinkURL = articleLinkURL;
+    }
+
+    /**
+     * 设置文章的来源
+     * 
+     * @param articleSource 传入文章的来源
+     */
+    public void setArticleSource(String articleSource) {
+        this.articleSource = articleSource;
+    }
+
+    public void setArticleThumbnails(String articleThumbnails) {
+        this.articleThumbnails = articleThumbnails;
+    }
+
+    public void setArticleTitle(String articleTitle) {
+        this.articleTitle = articleTitle;
+    }
+
+    /**
+     * 设置文章属性
+     * 
+     * @param articleType 传入文章属性
+     */
+    public void setArticleType(String articleType) {
+        this.articleType = articleType;
+    }
+
+    public void setArticleTypeLinkURL(String articleTypeLinkURL) {
+        this.articleTypeLinkURL = articleTypeLinkURL;
+    }
+
+    public void setArticleUpdateTime(Date articleUpdateTime) {
+        this.articleUpdateTime = articleUpdateTime;
+    }
+
+    /**
+     * 设置文章跳转链接
+     * 
+     * @param articleUrl 传入文章跳转链接地址
+     */
+    public void setArticleUrl(String articleUrl) {
+        this.articleUrl = articleUrl;
+    }
+
+    /**
+     * 设置文章所属的栏目实体
+     * 
+     * @param column
+     */
+    public void setColumn(ColumnEntity column) {
+        this.column = column;
+    }
+
 }

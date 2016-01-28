@@ -33,24 +33,26 @@ import com.mingsoft.people.entity.PeopleWebsiteModelEntity;
 @Service("peopleWebsiteModelBiz")
 public class PeopleWebsiteModelBizImpl extends BaseBizImpl implements IPeopleWebsiteModelBiz {
 
-	/**
-	 * 用户站点模块持久化层注入
-	 */
-	@Autowired
-	private IPeopleWebsiteModelDao peopleWebsiteModelDao;
-	
-	@Override
-	protected IBaseDao getDao() {
-		// TODO Auto-generated method stub
-		return peopleWebsiteModelDao;
-	}
+    /**
+     * 用户站点模块持久化层注入
+     */
+    @Autowired
+    private IPeopleWebsiteModelDao peopleWebsiteModelDao;
 
-	/**
-	 * 根据用户站点模块实体删除据用户站点模块字段
-	 * @param peopleWebsiteModel
-	 */
-	public void deleteEntity(PeopleWebsiteModelEntity peopleWebsiteModel ){
-		peopleWebsiteModelDao.deleteEntity(peopleWebsiteModel);
-	}
-	
+    /**
+     * 根据用户站点模块实体删除据用户站点模块字段
+     * 
+     * @param peopleWebsiteModel
+     */
+    @Override
+    public void deleteEntity(PeopleWebsiteModelEntity peopleWebsiteModel) {
+        peopleWebsiteModelDao.deleteEntity(peopleWebsiteModel);
+    }
+
+    @Override
+    protected IBaseDao getDao() {
+        // TODO Auto-generated method stub
+        return peopleWebsiteModelDao;
+    }
+
 }

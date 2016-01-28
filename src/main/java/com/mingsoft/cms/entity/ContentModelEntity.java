@@ -20,8 +20,8 @@ The MIT License (MIT) * Copyright (c) 2015 铭飞科技
  */
 
 package com.mingsoft.cms.entity;
-import com.mingsoft.base.entity.BaseEntity;
 
+import com.mingsoft.base.entity.BaseEntity;
 
 /**
  * 
@@ -42,107 +42,114 @@ import com.mingsoft.base.entity.BaseEntity;
  * 
  * @version 300-001-001
  * 
- * <p>
- * 版权所有 铭飞科技
- * </p>
- *  
- * <p>
- * Comments:内容模型实体，指表单类型，继承BaseEntity
- * </p>
- *  
- * <p>
- * Create Date:2014-9-11
- * </p>
+ *          <p>
+ *          版权所有 铭飞科技
+ *          </p>
+ * 
+ *          <p>
+ *          Comments:内容模型实体，指表单类型，继承BaseEntity
+ *          </p>
+ * 
+ *          <p>
+ *          Create Date:2014-9-11
+ *          </p>
  *
- * <p>
- * Modification history:暂无
- * </p>
+ *          <p>
+ *          Modification history:暂无
+ *          </p>
  */
-public class ContentModelEntity extends BaseEntity{
- 
-	/**
-	 * 自增长ID
-	 */
-	private int cmId;
-	
-	/**
-	 * 表名提示文字
-	 */
-	private String cmTipsName;
-	
-	/**
-	 * 表单名称
-	 */
-	private String cmTableName;
-	
-	/**
-	 * 表单所属的管理员id
-	 */
-	private int cmManagerId;
+public class ContentModelEntity extends BaseEntity {
 
-	/**
-	 * 获取cmId
-	 * @return cmId
-	 */
-	public int getCmId() {
-		return cmId;
-	}
+    /**
+     * 自增长ID
+     */
+    private int cmId;
 
-	/**
-	 * 设置cmId
-	 * @param cmId
-	 */
-	public void setCmId(int cmId) {
-		this.cmId = cmId;
-	}
+    /**
+     * 表单所属的管理员id
+     */
+    private int cmManagerId;
 
-	/**
-	 * 获取cmTipsName
-	 * @return cmTipsName
-	 */
-	public String getCmTipsName() {
-		return cmTipsName;
-	}
+    /**
+     * 表单名称
+     */
+    private String cmTableName;
 
-	/**
-	 * 设置cmTipsName
-	 * @param cmTipsName
-	 */
-	public void setCmTipsName(String cmTipsName) {
-		this.cmTipsName = cmTipsName;
-	}
+    /**
+     * 表名提示文字
+     */
+    private String cmTipsName;
 
-	/**
-	 * 获取cmTableName
-	 * @return cmTableName
-	 */
-	public String getCmTableName() {
-		return cmTableName;
-	}
+    /**
+     * 获取cmId
+     * 
+     * @return cmId
+     */
+    public int getCmId() {
+        return cmId;
+    }
 
-	/**
-	 * 设置cmTableName
-	 * @param cmTableName
-	 */
-	public void setCmTableName(String cmTableName) {
-		this.cmTableName = cmTableName;
-	}
-	
-	/**
-	 * 获取该表单所属的管理员id
-	 * @return
-	 */
-	public int getCmManagerId() {
-		return cmManagerId;
-	}
-	
-	/**
-	 * 设置该表单所属的管理员id
-	 * @param cmManagerId
-	 */
-	public void setCmManagerId(int cmManagerId) {
-		this.cmManagerId = cmManagerId;
-	}
-	
-	
+    /**
+     * 获取该表单所属的管理员id
+     * 
+     * @return
+     */
+    public int getCmManagerId() {
+        return cmManagerId;
+    }
+
+    /**
+     * 获取cmTableName
+     * 
+     * @return cmTableName
+     */
+    public String getCmTableName() {
+        return cmTableName;
+    }
+
+    /**
+     * 获取cmTipsName
+     * 
+     * @return cmTipsName
+     */
+    public String getCmTipsName() {
+        return cmTipsName;
+    }
+
+    /**
+     * 设置cmId
+     * 
+     * @param cmId
+     */
+    public void setCmId(int cmId) {
+        this.cmId = cmId;
+    }
+
+    /**
+     * 设置该表单所属的管理员id
+     * 
+     * @param cmManagerId
+     */
+    public void setCmManagerId(int cmManagerId) {
+        this.cmManagerId = cmManagerId;
+    }
+
+    /**
+     * 设置cmTableName
+     * 
+     * @param cmTableName
+     */
+    public void setCmTableName(String cmTableName) {
+        this.cmTableName = cmTableName;
+    }
+
+    /**
+     * 设置cmTipsName
+     * 
+     * @param cmTipsName
+     */
+    public void setCmTipsName(String cmTipsName) {
+        this.cmTipsName = cmTipsName;
+    }
+
 }

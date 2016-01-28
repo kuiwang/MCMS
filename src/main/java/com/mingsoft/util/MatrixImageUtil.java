@@ -77,71 +77,64 @@ import com.google.zxing.common.HybridBinarizer;
  */
 public class MatrixImageUtil {
 
-	/**
-	 * 生成二维码
-	 * 
-	 * @param content
-	 *            需要生成的内容
-	 * @param imgPath
-	 *            生成后保存的地址
-	 * @param width
-	 *            宽度
-	 * @param height
-	 *            高度
-	 */
-	@SuppressWarnings("deprecation")
-    public static void encode(String content, String imgPath, int width, int height) {
-		try {
-			if (StringUtil.isBlank(content) || StringUtil.isBlank(imgPath)) {
-				return;
-			}
-			BitMatrix byteMatrix;
-			byteMatrix = new MultiFormatWriter().encode(new String(content
-					.getBytes("utf-8"), "iso-8859-1"), BarcodeFormat.QR_CODE,
-					width, height);
-			File file = new File(imgPath);
-			MatrixToImageWriter.writeToFile(byteMatrix, "png", file);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * 解析二维码
-	 * 
-	 * @param imgPath
-	 *            二维码路径
-	 * @return 返回解析后的内容
-	 */
-	@SuppressWarnings("unchecked")
-	public static String decode(String imgPath) {
-		try {
-			File file = new File(imgPath);
-			BufferedImage image;
-			try {
-				image = ImageIO.read(file);
-				if (image == null) {
-					System.out.println("Could not decode image");
-				}
-				LuminanceSource source = new BufferedImageLuminanceSource(image);
-				BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(
-						source));
-				Result result;
-				@SuppressWarnings("rawtypes")
+    /**
+     * 解析二维码
+     * 
+     * @param imgPath 二维码路径
+     * @return 返回解析后的内容
+     */
+    @SuppressWarnings("unchecked")
+    public static String decode(String imgPath) {
+        try {
+            File file = new File(imgPath);
+            BufferedImage image;
+            try {
+                image = ImageIO.read(file);
+                if (image == null) {
+                    System.out.println("Could not decode image");
+                }
+                LuminanceSource source = new BufferedImageLuminanceSource(image);
+                BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+                Result result;
+                @SuppressWarnings("rawtypes")
                 Hashtable hints = new Hashtable();
-				hints.put(DecodeHintType.CHARACTER_SET, "GBK");
-				result = new MultiFormatReader().decode(bitmap, hints);
-				String resultStr = result.getText();
-				return resultStr;
-			} catch (IOException ioe) {
-				System.out.println(ioe.toString());
-			} catch (ReaderException re) {
-				System.out.println(re.toString());
-			}
+                hints.put(DecodeHintType.CHARACTER_SET, "GBK");
+                result = new MultiFormatReader().decode(bitmap, hints);
+                String resultStr = result.getText();
+                return resultStr;
+            } catch (IOException ioe) {
+                System.out.println(ioe.toString());
+            } catch (ReaderException re) {
+                System.out.println(re.toString());
+            }
 
-		} catch (Exception ex) {
+        } catch (Exception ex) {
 
-		}
-		return "";
-	}
+        }
+        return "";
+    }
+
+    /**
+     * 生成二维码
+     * 
+     * @param content 需要生成的内容
+     * @param imgPath 生成后保存的地址
+     * @param width 宽度
+     * @param height 高度
+     */
+    @SuppressWarnings("deprecation")
+    public static void encode(String content, String imgPath, int width, int height) {
+        try {
+            if (StringUtil.isBlank(content) || StringUtil.isBlank(imgPath)) {
+                return;
+            }
+            BitMatrix byteMatrix;
+            byteMatrix = new MultiFormatWriter().encode(new String(content.getBytes("utf-8"),
+                    "iso-8859-1"), BarcodeFormat.QR_CODE, width, height);
+            File file = new File(imgPath);
+            MatrixToImageWriter.writeToFile(byteMatrix, "png", file);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
